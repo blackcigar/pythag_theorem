@@ -1,0 +1,23 @@
+import math
+def pythagorean_theorem():
+    print("Input known side lengths and input '?' for unknown side.")
+    a = input("Enter Leg 1 length: ")
+    b = input("Enter Leg 2 length: ")
+    c = input("Enter Hypotonuse length: ")
+    if a == "?":
+        b = float(b)
+        c = float(c)
+        a = math.sqrt((c**2) - (b**2))
+        print("a = %f" % a)
+    if b == "?":
+        a = float(a)
+        c = float(c)
+        b = math.sqrt((c**2) - (a**2))
+        print("b = %f" % b)
+    if c == "?":
+        a = float(a)
+        b = float(b)
+        c = math.sqrt((a**2) + (b**2))
+        print("c = %f" % c)
+
+pythagorean_theorem()
